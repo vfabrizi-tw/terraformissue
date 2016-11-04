@@ -1,0 +1,7 @@
+output "asgName" {
+  value = "${aws_autoscaling_group.asg-stack.name}"
+}
+
+output "elbDnsName" {
+  value = "${aws_elb.elb-stack.dns_name}"
+}

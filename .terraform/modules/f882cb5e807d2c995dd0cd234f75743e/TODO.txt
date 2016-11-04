@@ -1,0 +1,3 @@
+[asg.tf - aws_autoscaling_group] Find a way to have two tag with the same name, as one is the Id relative to the ASG, while the other is the Id which is being inherited by the istance created by the ASG itself.
+
+ 
