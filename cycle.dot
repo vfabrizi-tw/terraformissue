@@ -1,0 +1,165 @@
+digraph {
+	compound = "true"
+	newrank = "true"
+	subgraph "root" {
+		"[root] data.template_file.iam_role_file" [label = "data.template_file.iam_role_file", shape = "box"]
+		"[root] data.template_file.iam_role_policy_file" [label = "data.template_file.iam_role_policy_file", shape = "box"]
+		"[root] data.template_file.iam_role_policy_var" [label = "data.template_file.iam_role_policy_var", shape = "box"]
+		"[root] data.template_file.iam_role_var" [label = "data.template_file.iam_role_var", shape = "box"]
+		"[root] data.template_file.user_data_file" [label = "data.template_file.user_data_file", shape = "box"]
+		"[root] data.template_file.user_data_var" [label = "data.template_file.user_data_var", shape = "box"]
+		"[root] data.terraform_remote_state.network" [label = "data.terraform_remote_state.network", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_app_cookie_stickiness_policy.stickyhttps" [label = "aws_app_cookie_stickiness_policy.stickyhttps", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_app_cookie_stickiness_policy.stickyhtttp" [label = "aws_app_cookie_stickiness_policy.stickyhtttp", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_autoscaling_group.asg-stack" [label = "aws_autoscaling_group.asg-stack", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_autoscaling_policy.scale-down" [label = "aws_autoscaling_policy.scale-down", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_autoscaling_policy.scale-up" [label = "aws_autoscaling_policy.scale-up", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_cloudwatch_metric_alarm.cpu-load-down" [label = "aws_cloudwatch_metric_alarm.cpu-load-down", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_cloudwatch_metric_alarm.cpu-load-up" [label = "aws_cloudwatch_metric_alarm.cpu-load-up", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_cloudwatch_metric_alarm.elb_desired_hosts" [label = "aws_cloudwatch_metric_alarm.elb_desired_hosts", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_cloudwatch_metric_alarm.elb_minimum_hosts" [label = "aws_cloudwatch_metric_alarm.elb_minimum_hosts", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_elb.elb-stack" [label = "aws_elb.elb-stack", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_iam_instance_profile.stack-profile" [label = "aws_iam_instance_profile.stack-profile", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_iam_role.role" [label = "aws_iam_role.role", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_iam_role_policy.policy" [label = "aws_iam_role_policy.policy", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_launch_configuration.lc-stack" [label = "aws_launch_configuration.lc-stack", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_security_group.sg_elb-stack" [label = "aws_security_group.sg_elb-stack", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_security_group.sg_i-stack" [label = "aws_security_group.sg_i-stack", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_security_group_rule.sg_elb-egrees" [label = "aws_security_group_rule.sg_elb-egrees", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_security_group_rule.sg_elb-ingress" [label = "aws_security_group_rule.sg_elb-ingress", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_security_group_rule.sg_i-egrees" [label = "aws_security_group_rule.sg_i-egrees", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_security_group_rule.sg_i-ingress" [label = "aws_security_group_rule.sg_i-ingress", shape = "box"]
+		"[root] module.stack_ext_ssl.aws_sns_topic.alerts" [label = "aws_sns_topic.alerts", shape = "box"]
+		"[root] module.stack_ext_ssl.data.template_file.iam_role_file" [label = "data.template_file.iam_role_file", shape = "box"]
+		"[root] module.stack_ext_ssl.data.template_file.iam_role_policy_file" [label = "data.template_file.iam_role_policy_file", shape = "box"]
+		"[root] module.stack_ext_ssl.data.template_file.iam_role_policy_var" [label = "data.template_file.iam_role_policy_var", shape = "box"]
+		"[root] module.stack_ext_ssl.data.template_file.iam_role_var" [label = "data.template_file.iam_role_var", shape = "box"]
+		"[root] module.stack_ext_ssl.data.template_file.user_data_file" [label = "data.template_file.user_data_file", shape = "box"]
+		"[root] module.stack_ext_ssl.data.template_file.user_data_var" [label = "data.template_file.user_data_var", shape = "box"]
+		"[root] module.stack_ext_ssl.provider.aws" [label = "provider.aws", shape = "diamond"]
+		"[root] module.stack_ext_ssl.provider.template" [label = "provider.template", shape = "diamond"]
+		"[root] provider.aws (disabled)" [label = "provider.aws (disabled)", shape = "diamond"]
+		"[root] provider.random" [label = "provider.random", shape = "diamond"]
+		"[root] provider.template" [label = "provider.template", shape = "diamond"]
+		"[root] provider.terraform" [label = "provider.terraform", shape = "diamond"]
+		"[root] random_id.stack" [label = "random_id.stack", shape = "box"]
+		"[root] data.template_file.iam_role_file (destroy)" -> "[root] data.template_file.iam_role_file" [color = "green", penwidth = "2.0"]
+		"[root] data.template_file.iam_role_file" -> "[root] module.stack_ext_ssl.data.template_file.iam_role_var (destroy)" [color = "green", penwidth = "2.0"]
+		"[root] data.template_file.iam_role_file" -> "[root] provider.template"
+		"[root] data.template_file.iam_role_policy_file (destroy)" -> "[root] data.template_file.iam_role_policy_file" [color = "blue", penwidth = "2.0"]
+		"[root] data.template_file.iam_role_policy_file" -> "[root] module.stack_ext_ssl.data.template_file.iam_role_policy_file (destroy)" [color = "blue", penwidth = "2.0"]
+		"[root] data.template_file.iam_role_policy_file" -> "[root] provider.template"
+		"[root] data.template_file.iam_role_policy_var (destroy)" -> "[root] data.template_file.iam_role_policy_var" [color = "blue", penwidth = "2.0"]
+		"[root] data.template_file.iam_role_policy_var" -> "[root] module.stack_ext_ssl.var.iam_role_policy" [color = "blue", penwidth = "2.0"]
+		"[root] data.template_file.iam_role_policy_var" -> "[root] provider.template"
+		"[root] data.template_file.iam_role_var (destroy)" -> "[root] data.template_file.iam_role_var" [color = "green", penwidth = "2.0"]
+		"[root] data.template_file.iam_role_var" -> "[root] module.stack_ext_ssl.var.iam_role" [color = "green", penwidth = "2.0"]
+		"[root] data.template_file.iam_role_var" -> "[root] provider.template"
+		"[root] data.template_file.user_data_file (destroy)" -> "[root] data.template_file.user_data_file" [color = "red", penwidth = "2.0"]
+		"[root] data.template_file.user_data_file" -> "[root] module.stack_ext_ssl.var.user_data" [color = "red", penwidth = "2.0"]
+		"[root] data.template_file.user_data_file" -> "[root] provider.template"
+		"[root] data.template_file.user_data_var (destroy)" -> "[root] data.template_file.user_data_var" [color = "red", penwidth = "2.0"]
+		"[root] data.template_file.user_data_var" -> "[root] module.stack_ext_ssl.data.template_file.user_data_var (destroy)" [color = "red", penwidth = "2.0"]
+		"[root] data.template_file.user_data_var" -> "[root] provider.template"
+		"[root] data.terraform_remote_state.network" -> "[root] provider.terraform"
+		"[root] module.stack_ext_ssl.aws_app_cookie_stickiness_policy.stickyhttps" -> "[root] module.stack_ext_ssl.aws_elb.elb-stack"
+		"[root] module.stack_ext_ssl.aws_app_cookie_stickiness_policy.stickyhttps" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_app_cookie_stickiness_policy.stickyhttps" -> "[root] random_id.stack"
+		"[root] module.stack_ext_ssl.aws_app_cookie_stickiness_policy.stickyhtttp" -> "[root] module.stack_ext_ssl.aws_elb.elb-stack"
+		"[root] module.stack_ext_ssl.aws_app_cookie_stickiness_policy.stickyhtttp" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_app_cookie_stickiness_policy.stickyhtttp" -> "[root] random_id.stack"
+		"[root] module.stack_ext_ssl.aws_autoscaling_group.asg-stack" -> "[root] data.terraform_remote_state.network"
+		"[root] module.stack_ext_ssl.aws_autoscaling_group.asg-stack" -> "[root] module.stack_ext_ssl.aws_elb.elb-stack"
+		"[root] module.stack_ext_ssl.aws_autoscaling_group.asg-stack" -> "[root] module.stack_ext_ssl.aws_launch_configuration.lc-stack"
+		"[root] module.stack_ext_ssl.aws_autoscaling_group.asg-stack" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_autoscaling_group.asg-stack" -> "[root] random_id.stack"
+		"[root] module.stack_ext_ssl.aws_autoscaling_policy.scale-down" -> "[root] module.stack_ext_ssl.aws_autoscaling_group.asg-stack"
+		"[root] module.stack_ext_ssl.aws_autoscaling_policy.scale-down" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_autoscaling_policy.scale-down" -> "[root] random_id.stack"
+		"[root] module.stack_ext_ssl.aws_autoscaling_policy.scale-up" -> "[root] module.stack_ext_ssl.aws_autoscaling_group.asg-stack"
+		"[root] module.stack_ext_ssl.aws_autoscaling_policy.scale-up" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_autoscaling_policy.scale-up" -> "[root] random_id.stack"
+		"[root] module.stack_ext_ssl.aws_cloudwatch_metric_alarm.cpu-load-down" -> "[root] module.stack_ext_ssl.aws_autoscaling_group.asg-stack"
+		"[root] module.stack_ext_ssl.aws_cloudwatch_metric_alarm.cpu-load-down" -> "[root] module.stack_ext_ssl.aws_autoscaling_policy.scale-down"
+		"[root] module.stack_ext_ssl.aws_cloudwatch_metric_alarm.cpu-load-down" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_cloudwatch_metric_alarm.cpu-load-down" -> "[root] random_id.stack"
+		"[root] module.stack_ext_ssl.aws_cloudwatch_metric_alarm.cpu-load-up" -> "[root] module.stack_ext_ssl.aws_autoscaling_group.asg-stack"
+		"[root] module.stack_ext_ssl.aws_cloudwatch_metric_alarm.cpu-load-up" -> "[root] module.stack_ext_ssl.aws_autoscaling_policy.scale-up"
+		"[root] module.stack_ext_ssl.aws_cloudwatch_metric_alarm.cpu-load-up" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_cloudwatch_metric_alarm.cpu-load-up" -> "[root] random_id.stack"
+		"[root] module.stack_ext_ssl.aws_cloudwatch_metric_alarm.elb_desired_hosts" -> "[root] module.stack_ext_ssl.aws_elb.elb-stack"
+		"[root] module.stack_ext_ssl.aws_cloudwatch_metric_alarm.elb_desired_hosts" -> "[root] module.stack_ext_ssl.aws_sns_topic.alerts"
+		"[root] module.stack_ext_ssl.aws_cloudwatch_metric_alarm.elb_desired_hosts" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_cloudwatch_metric_alarm.elb_desired_hosts" -> "[root] random_id.stack"
+		"[root] module.stack_ext_ssl.aws_cloudwatch_metric_alarm.elb_minimum_hosts" -> "[root] module.stack_ext_ssl.aws_elb.elb-stack"
+		"[root] module.stack_ext_ssl.aws_cloudwatch_metric_alarm.elb_minimum_hosts" -> "[root] module.stack_ext_ssl.aws_sns_topic.alerts"
+		"[root] module.stack_ext_ssl.aws_cloudwatch_metric_alarm.elb_minimum_hosts" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_cloudwatch_metric_alarm.elb_minimum_hosts" -> "[root] random_id.stack"
+		"[root] module.stack_ext_ssl.aws_elb.elb-stack" -> "[root] data.terraform_remote_state.network"
+		"[root] module.stack_ext_ssl.aws_elb.elb-stack" -> "[root] module.stack_ext_ssl.aws_security_group.sg_elb-stack"
+		"[root] module.stack_ext_ssl.aws_elb.elb-stack" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_elb.elb-stack" -> "[root] random_id.stack"
+		"[root] module.stack_ext_ssl.aws_iam_instance_profile.stack-profile" -> "[root] module.stack_ext_ssl.aws_iam_role.role"
+		"[root] module.stack_ext_ssl.aws_iam_instance_profile.stack-profile" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_iam_role.role" -> "[root] data.template_file.iam_role_file"
+		"[root] module.stack_ext_ssl.aws_iam_role.role" -> "[root] data.template_file.iam_role_var"
+		"[root] module.stack_ext_ssl.aws_iam_role.role" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_iam_role_policy.policy" -> "[root] data.template_file.iam_role_policy_file"
+		"[root] module.stack_ext_ssl.aws_iam_role_policy.policy" -> "[root] data.template_file.iam_role_policy_var"
+		"[root] module.stack_ext_ssl.aws_iam_role_policy.policy" -> "[root] module.stack_ext_ssl.aws_iam_role.role"
+		"[root] module.stack_ext_ssl.aws_iam_role_policy.policy" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_launch_configuration.lc-stack" -> "[root] data.template_file.user_data_file"
+		"[root] module.stack_ext_ssl.aws_launch_configuration.lc-stack" -> "[root] data.template_file.user_data_var"
+		"[root] module.stack_ext_ssl.aws_launch_configuration.lc-stack" -> "[root] module.stack_ext_ssl.aws_iam_instance_profile.stack-profile"
+		"[root] module.stack_ext_ssl.aws_launch_configuration.lc-stack" -> "[root] module.stack_ext_ssl.aws_security_group.sg_i-stack"
+		"[root] module.stack_ext_ssl.aws_launch_configuration.lc-stack" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_security_group.sg_elb-stack" -> "[root] data.terraform_remote_state.network"
+		"[root] module.stack_ext_ssl.aws_security_group.sg_elb-stack" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_security_group.sg_elb-stack" -> "[root] random_id.stack"
+		"[root] module.stack_ext_ssl.aws_security_group.sg_i-stack" -> "[root] data.terraform_remote_state.network"
+		"[root] module.stack_ext_ssl.aws_security_group.sg_i-stack" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_security_group.sg_i-stack" -> "[root] random_id.stack"
+		"[root] module.stack_ext_ssl.aws_security_group_rule.sg_elb-egrees" -> "[root] module.stack_ext_ssl.aws_security_group.sg_elb-stack"
+		"[root] module.stack_ext_ssl.aws_security_group_rule.sg_elb-egrees" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_security_group_rule.sg_elb-ingress" -> "[root] module.stack_ext_ssl.aws_security_group.sg_elb-stack"
+		"[root] module.stack_ext_ssl.aws_security_group_rule.sg_elb-ingress" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_security_group_rule.sg_i-egrees" -> "[root] module.stack_ext_ssl.aws_security_group.sg_i-stack"
+		"[root] module.stack_ext_ssl.aws_security_group_rule.sg_i-egrees" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_security_group_rule.sg_i-ingress" -> "[root] data.terraform_remote_state.network"
+		"[root] module.stack_ext_ssl.aws_security_group_rule.sg_i-ingress" -> "[root] module.stack_ext_ssl.aws_security_group.sg_i-stack"
+		"[root] module.stack_ext_ssl.aws_security_group_rule.sg_i-ingress" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_sns_topic.alerts" -> "[root] module.stack_ext_ssl.provider.aws"
+		"[root] module.stack_ext_ssl.aws_sns_topic.alerts" -> "[root] random_id.stack"
+		"[root] module.stack_ext_ssl.data.template_file.iam_role_file (destroy)" -> "[root] data.template_file.iam_role_var (destroy)" [color = "green", penwidth = "2.0"]
+		"[root] module.stack_ext_ssl.data.template_file.iam_role_file" -> "[root] data.template_file.iam_role_file"
+		"[root] module.stack_ext_ssl.data.template_file.iam_role_file" -> "[root] data.template_file.iam_role_var"
+		"[root] module.stack_ext_ssl.data.template_file.iam_role_file" -> "[root] module.stack_ext_ssl.provider.template"
+		"[root] module.stack_ext_ssl.data.template_file.iam_role_policy_file (destroy)" -> "[root] module.stack_ext_ssl.data.template_file.iam_role_policy_var (destroy)" [color = "blue", penwidth = "2.0"]
+		"[root] module.stack_ext_ssl.data.template_file.iam_role_policy_file" -> "[root] data.template_file.iam_role_policy_file"
+		"[root] module.stack_ext_ssl.data.template_file.iam_role_policy_file" -> "[root] data.template_file.iam_role_policy_var"
+		"[root] module.stack_ext_ssl.data.template_file.iam_role_policy_file" -> "[root] module.stack_ext_ssl.provider.template"
+		"[root] module.stack_ext_ssl.data.template_file.iam_role_policy_var (destroy)" -> "[root] data.template_file.iam_role_policy_var (destroy)" [color = "blue", penwidth = "2.0"]
+		"[root] module.stack_ext_ssl.data.template_file.iam_role_policy_var" -> "[root] data.template_file.iam_role_policy_file"
+		"[root] module.stack_ext_ssl.data.template_file.iam_role_policy_var" -> "[root] data.template_file.iam_role_policy_var"
+		"[root] module.stack_ext_ssl.data.template_file.iam_role_policy_var" -> "[root] module.stack_ext_ssl.provider.template"
+		"[root] module.stack_ext_ssl.data.template_file.iam_role_var (destroy)" -> "[root] module.stack_ext_ssl.data.template_file.iam_role_file (destroy)" [color = "green", penwidth = "2.0"]
+		"[root] module.stack_ext_ssl.data.template_file.iam_role_var" -> "[root] data.template_file.iam_role_file"
+		"[root] module.stack_ext_ssl.data.template_file.iam_role_var" -> "[root] data.template_file.iam_role_var"
+		"[root] module.stack_ext_ssl.data.template_file.iam_role_var" -> "[root] module.stack_ext_ssl.provider.template"
+		"[root] module.stack_ext_ssl.data.template_file.user_data_file (destroy)" -> "[root] data.template_file.user_data_file (destroy)" [color = "red", penwidth = "2.0"]
+		"[root] module.stack_ext_ssl.data.template_file.user_data_file" -> "[root] data.template_file.user_data_file"
+		"[root] module.stack_ext_ssl.data.template_file.user_data_file" -> "[root] data.template_file.user_data_var"
+		"[root] module.stack_ext_ssl.data.template_file.user_data_file" -> "[root] module.stack_ext_ssl.provider.template"
+		"[root] module.stack_ext_ssl.data.template_file.user_data_var (destroy)" -> "[root] module.stack_ext_ssl.data.template_file.user_data_file (destroy)" [color = "red", penwidth = "2.0"]
+		"[root] module.stack_ext_ssl.data.template_file.user_data_var" -> "[root] data.template_file.user_data_file"
+		"[root] module.stack_ext_ssl.data.template_file.user_data_var" -> "[root] data.template_file.user_data_var"
+		"[root] module.stack_ext_ssl.data.template_file.user_data_var" -> "[root] module.stack_ext_ssl.provider.template"
+		"[root] module.stack_ext_ssl.provider.aws" -> "[root] provider.aws (disabled)"
+		"[root] module.stack_ext_ssl.provider.template" -> "[root] provider.template"
+		"[root] module.stack_ext_ssl.var.iam_role" -> "[root] data.template_file.iam_role_file (destroy)" [color = "green", penwidth = "2.0"]
+		"[root] module.stack_ext_ssl.var.iam_role_policy" -> "[root] data.template_file.iam_role_policy_file (destroy)" [color = "blue", penwidth = "2.0"]
+		"[root] module.stack_ext_ssl.var.user_data" -> "[root] data.template_file.user_data_var (destroy)" [color = "red", penwidth = "2.0"]
+		"[root] random_id.stack" -> "[root] provider.random"
+	}
+}
+
